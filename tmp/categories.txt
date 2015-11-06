@@ -1,0 +1,10 @@
+<option value=""></option>
+<option value="ccc">community</option>
+<option value="eee">events</option>
+<option value="sss">for sale</option>
+<option value="ggg" selected="selected">gigs</option>
+<option value="hhh">housing</option>
+<option value="jjj">jobs</option>
+<option value="ppp">personals</option>
+<option value="rrr">resumes</option>
+<option value="bbb">services</option>
