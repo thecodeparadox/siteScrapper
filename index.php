@@ -11,24 +11,6 @@ require_once dirname(__FILE__) . '/config/bootstrap.php';
 use SiteScrapper\SiteScrapper;
 
 $craiglistJobs = [];
-<<<<<<< HEAD
-$area = 'albany';
-$category = 'jjj';
-$search = '';
-
-if ( isset($_POST) && isset($_POST['area']) && isset($_POST['category']) && isset($_POST['search']) ) {
-    $area = $_POST['area'];
-    $category = $_POST['category'];
-    $search = $_POST['search'];
-
-    $craiglistJobs = SiteScrapper::craigslistJobs();
-}
-
-
-
-?>
-
-=======
 $area = '';
 $category = 'jjj';
 $search = '';
@@ -42,7 +24,6 @@ if ( isset($_POST) && !empty($_POST['area']) && !empty($_POST['category']) && !e
     $craiglistJobs = SiteScrapper::craigslistJobs();
 }
 ?>
->>>>>>> master
 <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -54,11 +35,8 @@ if ( isset($_POST) && !empty($_POST['area']) && !empty($_POST['category']) && !e
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
         <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-<<<<<<< HEAD
-=======
         <link href="assets/css/chosen.min.css" rel="stylesheet">
         <link href="assets/css/site.css" rel="stylesheet">
->>>>>>> master
     </head>
     <body>
         <div class="container">
@@ -68,33 +46,6 @@ if ( isset($_POST) && !empty($_POST['area']) && !empty($_POST['category']) && !e
                 <hr>
             </div>
 
-<<<<<<< HEAD
-            <div class="jumbotron">
-                <form class="form-horizontal" method="post" action="">
-                    <div class="form-group">
-                        <label for="areas">Area</label>
-                        <select name="area" class="form-control" id="areas" value="<?= $area ?>">
-                            <?php echo file_get_contents(TMP . '/jones.txt'); ?>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="categories">Category</label>
-                        <select name="category" class="form-control" id="categories" value="<?= $category ?>">
-                            <?php echo file_get_contents(TMP . '/categories.txt'); ?>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="search">Topic</label>
-                        <input type="text" class="form-control" id="search" name="search" value="<?= $search ?>">
-                    </div>
-
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-success">Find</button>
-                    </div>
-                </form>
-=======
             <div class="well">
 				<form class="form-horizontal" method="post" action="" id="scrapping-search">
 					<fieldset>
@@ -131,7 +82,6 @@ if ( isset($_POST) && !empty($_POST['area']) && !empty($_POST['category']) && !e
 						</div>
 					</fieldset>
 				</form>
->>>>>>> master
             </div>
 
 
@@ -154,13 +104,8 @@ if ( isset($_POST) && !empty($_POST['area']) && !empty($_POST['category']) && !e
                                 <tbody>
                                 <?php foreach($craiglistJobs as $job): ?>
                                     <tr>
-<<<<<<< HEAD
-                                        <td><a href="<?php echo $job['href']; ?>"><?php echo $job['text']; ?></a></td>
-                                        <td><?php echo $job['datetime']; ?></td>
-=======
                                         <td><a href="<?= $job['href']; ?>"><?php echo $job['text']; ?></a></td>
                                         <td><?= $job['datetime']; ?></td>
->>>>>>> master
                                     </tr>
                                 <?php endforeach; ?>
                                 </tbody>
@@ -172,11 +117,8 @@ if ( isset($_POST) && !empty($_POST['area']) && !empty($_POST['category']) && !e
         </div>
     <script src="assets/js/jquery-1.11.3.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-<<<<<<< HEAD
-=======
     <script src="assets/js/chosen.jquery.min.js"></script>
     <script src="assets/js/site.js"></script>
->>>>>>> master
 
     </body>
 </html>

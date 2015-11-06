@@ -21,11 +21,7 @@ class SiteScrapper
 
     public static function getContent($area, $category, $search)
     {
-<<<<<<< HEAD
-        $HTMLPage = file_get_contents('http://'. $area .'.craigslist.org/search/'. $category .'?sort=rel&query='. $search .'');
-=======
         $HTMLPage = file_get_contents($area . 'search/'. $category .'?sort=rel&query='. $search .'');
->>>>>>> master
         return $HTMLPage;
     }
 
@@ -40,11 +36,7 @@ class SiteScrapper
         $category = $_POST['category'];
         $search = $_POST['search'];
 
-<<<<<<< HEAD
-        $baseURL = 'http://'. $area . '.craigslist.org/';
-=======
         $baseURL = $area;
->>>>>>> master
         $dom = self::getContent($area, $category, $search);
 
 
