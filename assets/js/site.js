@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Created by abdullah on 10/28/15.
  */
@@ -139,5 +140,13 @@ $(document).ready(function () {
     }).on('changeDate', function () {
         var id = this.id, target = this.id.replace('-picker', '');
         $('#' + target).val( this.value.length ? (new Date(this.value).toString('yyyy-MM-dd')) : '' );
+=======
+;$(document).ready(function () {
+    $('select.chosen').chosen({
+        allow_single_deselect: true
+    });
+    $('#scrapping-search').on('submit', function (e) {
+        $(this).find('input, select, button').prop('disabled', true).trigger('chosen:updated');
+>>>>>>> master
     });
 });

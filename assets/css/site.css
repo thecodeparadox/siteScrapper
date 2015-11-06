@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * Style tweaks
  * --------------------------------------------------
@@ -181,4 +182,8 @@ td.actions {
 .stock-detail dd,
 .stock-detail dt {
     margin-bottom: 3px;
+=======
+.toggle .fa {
+    font-size: 13px;
+>>>>>>> master
 }
